@@ -63,7 +63,7 @@ section {
 
 /* Abschnitt: Home */
 #home {
-  background-color: #000; /* Hintergrundfarbe auf Schwarz setzen */
+  background-color: transparent; /* Hintergrundfarbe auf Schwarz setzen */
   color: #fff;
   position: relative;
   min-height: 100vh;
