@@ -1,1 +1,102 @@
+/* styles.css */
+
+/* Allgemeine Stile */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Kopfzeile */
+header {
+  background-color: #333;
+  padding: 15px;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Container für den Inhalt innerhalb der Kopfzeile */
+header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Abschnitte */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#home {
+  background-color: #333;
+  color: #fff;
+}
+
+#bikepacking {
+  background-color: #666;
+  color: #fff;
+}
+
+#map {
+  background-color: #fff;
+  color: #333;
+}
+
+#about {
+  background-color: #444;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Container für den Inhalt innerhalb des Footers */
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
