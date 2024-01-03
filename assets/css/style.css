@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: url('your-background-image.jpg') no-repeat center center fixed;
+    background: url('topo_1.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     transition: background 0.5s ease;
