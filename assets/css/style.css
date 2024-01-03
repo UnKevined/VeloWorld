@@ -71,17 +71,20 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden; /* Hinzugefügt, um Überlappung zu vermeiden */
 }
 
 #home img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: -1; /* Hinzugefügt, um das Bild unter den Text zu legen */
 }
 
 #home .container {
   position: relative;
   text-align: center;
+  z-index: 1; /* Hinzugefügt, um den Text über das Bild zu legen */
 }
 
 #home h1 {
@@ -89,7 +92,6 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
 }
 
 
