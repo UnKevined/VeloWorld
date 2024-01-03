@@ -1,67 +1,30 @@
-/* Reset some default styles */
-body,
-h1,
-h2,
-h3,
-p {
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeloWorld</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-    font-family: 'Arial', sans-serif;
-}
+    <!-- Abschnitt 1: Grauer Hintergrund -->
+    <section class="gray-section">
+        <h1>Willkommen bei VeloWorld</h1>
+        <p>Entdecke die Welt auf zwei Rädern.</p>
+    </section>
 
-/* Global styles */
-body {
-    background-color: #f0f0f0;
-    color: #333;
-}
+    <!-- Abschnitt 2: Schwarzer Hintergrund -->
+    <section class="black-section">
+        <h2>Abenteuer beginnt hier</h2>
+        <p>Erkunde neue Routen und erlebe die Freiheit des Radfahrens.</p>
+    </section>
 
-.window {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
+    <!-- Abschnitt 3: Weißer Hintergrund -->
+    <section class="white-section">
+        <h2>Dein Velo, Deine Geschwindigkeit</h2>
+        <p>Finde das perfekte Fahrrad für deine Bedürfnisse.</p>
+    </section>
 
-/* Header styles */
-header {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-}
-
-header a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Explore section styles */
-#explore {
-    text-align: center;
-}
-
-/* Features section styles */
-.background-image {
-    background-image: url('your-background-image.jpg');
-    background-size: cover;
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
-}
-
-/* Contact section styles */
-#contact {
-    text-align: center;
-}
-
-/* Footer styles */
-footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-/* Add more styles as needed */
+</body>
+</html>
