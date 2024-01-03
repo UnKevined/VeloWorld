@@ -1,3 +1,10 @@
+/* Allgemeine Stile */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden; /* Verhindert horizontales Scrollen */
+}
+
 /* Kopfzeile */
 header {
   background-color: #333;
