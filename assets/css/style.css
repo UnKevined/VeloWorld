@@ -63,7 +63,7 @@ section {
 
 /* Abschnitt: Home */
 #home {
-  background-color: #333; /* Hintergrundfarbe auf die gleiche Farbe wie das Bild setzen */
+  background-color: #000; /* Hintergrundfarbe auf die gleiche Farbe wie das Bild setzen */
   color: #fff;
   position: relative;
   min-height: 100vh;
