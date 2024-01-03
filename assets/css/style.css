@@ -63,17 +63,19 @@ section {
 
 /* Abschnitt: Home */
 #home {
-  background-color: #000; /* Hintergrundfarbe auf die gleiche Farbe wie das Bild setzen */
+  background-color: #000; /* Hintergrundfarbe auf Schwarz setzen */
   color: #fff;
   position: relative;
   min-height: 100vh;
   overflow: hidden; /* Verhindert Überlauf und sichtbaren Rahmen */
 }
 
-#home img {
+#home img,
+#home svg {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Bild an Container anpassen, ohne das Seitenverhältnis zu verzerren */
+  display: block; /* entfernt den zusätzlichen Platz, der manchmal um Bilder herum erscheint */
 }
 
 #home .container {
@@ -89,6 +91,7 @@ section {
   transform: translate(-50%, -50%);
   font-size: 2em; /* Ändere die Schriftgröße hier nach Bedarf */
 }
+
 
 #bikepacking {
   background-color: #666;
