@@ -1,9 +1,3 @@
-/* Allgemeine Stile */
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-}
-
 /* Kopfzeile */
 header {
   background-color: #333;
@@ -34,9 +28,15 @@ nav a {
   font-size: 16px;
 }
 
+/* Container für den Inhalt innerhalb der Kopfzeile */
+header .container {
+  max-width: 1200px;
+  margin: 0 auto; /* Zentriert den Container */
+}
+
 /* Abschnitte */
 section {
-  min-height: 100vh; /* Vollständige Bildschirmhöhe für jeden Abschnitt */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,4 +74,10 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+/* Container für den Inhalt innerhalb des Footers */
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto; /* Zentriert den Container */
 }
