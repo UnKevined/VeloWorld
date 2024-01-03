@@ -79,6 +79,7 @@ section {
   height: 100%;
   object-fit: cover;
   z-index: -1; /* Hinzugefügt, um das Bild unter den Text zu legen */
+  background-color: #333; /* Hinzugefügt: Hintergrundfarbe für den Fall, dass das Bild nicht die gesamte Section abdeckt */
 }
 
 #home .container {
