@@ -1,10 +1,8 @@
-/* styles.css */
-
 /* Allgemeine Stile */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Verhindert horizontales Scrollen */
 }
 
 /* Kopfzeile */
@@ -16,11 +14,11 @@ header {
   width: 100%;
   top: 0;
   z-index: 1000;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Hinzugefügt, um das Box-Modell zu berücksichtigen */
 }
 
 nav {
-  width: 100%;
+  width: 100%; /* Füllt den verfügbaren Platz in der Kopfzeile aus */
 }
 
 nav ul {
@@ -29,7 +27,7 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: center; /* Vertikal zentrieren */
 }
 
 nav li {
@@ -46,10 +44,10 @@ nav a {
 /* Container für den Inhalt innerhalb der Kopfzeile */
 header .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; /* Zentriert den Container */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* Abstand zwischen den Elementen */
+  align-items: center; /* Vertikal zentrieren */
 }
 
 /* Abschnitte */
@@ -97,5 +95,5 @@ footer {
 /* Container für den Inhalt innerhalb des Footers */
 footer .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; /* Zentriert den Container */
 }
