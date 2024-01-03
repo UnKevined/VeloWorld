@@ -22,31 +22,40 @@
       width: 100%;
       top: 0;
       z-index: 1000;
+      box-sizing: border-box; /* Hinzugefügt, um das Box-Modell zu berücksichtigen */
     }
-
+    
+    nav {
+      width: 100%; /* Füllt den verfügbaren Platz in der Kopfzeile aus */
+    }
+    
     nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
       justify-content: flex-end;
+      align-items: center; /* Vertikal zentrieren */
     }
-
+    
     nav li {
       margin: 0 10px;
     }
-
+    
     nav a {
       text-decoration: none;
       color: #fff;
       font-weight: bold;
       font-size: 16px;
     }
-
+    
     /* Container für den Inhalt innerhalb der Kopfzeile */
     header .container {
       max-width: 1200px;
       margin: 0 auto; /* Zentriert den Container */
+      display: flex;
+      justify-content: space-between; /* Abstand zwischen den Elementen */
+      align-items: center; /* Vertikal zentrieren */
     }
 
     /* Abschnitte */
@@ -115,7 +124,7 @@
   <section id="home">
     <div class="container">
       <h1>Welcome to VeloWorld</h1>
-      <img src="your_image_url.jpg" alt="Welcome Image">
+      <img src="topo_1.jpg" alt="Welcome Image">
     </div>
   </section>
 
