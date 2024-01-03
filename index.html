@@ -5,121 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VeloWorld</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-    }
-
-    /* Kopfzeile */
-    header {
-      background-color: #333;
-      padding: 15px;
-      color: #fff;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    nav li {
-      margin: 0 10px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    /* Abschnitte */
-    section {
-      min-height: 100vh; /* Vollständige Bildschirmhöhe für jeden Abschnitt */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    #home {
-      background-color: #333;
-      color: #fff;
-    }
-
-    #bikepacking {
-      background-color: #666;
-      color: #fff;
-    }
-
-    #map {
-      background-color: #fff;
-      color: #333;
-    }
-
-    #about {
-      background-color: #444;
-      color: #fff;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #333;
-      padding: 10px;
-      text-align: center;
-      color: #fff;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#bikepacking">Bikepacking</a></li>
-        <li><a href="#map">Map</a></li>
-        <li><a href="#about">About Me</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#bikepacking">Bikepacking</a></li>
+          <li><a href="#map">Map</a></li>
+          <li><a href="#about">About Me</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <section id="home">
-    <h1>Welcome to VeloWorld</h1>
-    <img src="your_image_url.jpg" alt="Welcome Image">
+    <div class="container">
+      <h1>Welcome to VeloWorld</h1>
+      <img src="your_image_url.jpg" alt="Welcome Image">
+    </div>
   </section>
 
   <section id="bikepacking">
-    <h2>Bikepacking</h2>
-    <p>Discover the thrill of bikepacking with VeloWorld.</p>
-    <!-- Add more content as needed -->
+    <div class="container">
+      <h2>Bikepacking</h2>
+      <p>Discover the thrill of bikepacking with VeloWorld.</p>
+      <!-- Add more content as needed -->
+    </div>
   </section>
 
   <section id="map">
-    <h2>Interactive Map</h2>
-    <!-- Add your interactive map content here -->
+    <div class="container">
+      <h2>Interactive Map</h2>
+      <!-- Add your interactive map content here -->
+    </div>
   </section>
 
   <section id="about">
-    <h2>About Me</h2>
-    <p>Learn more about the person behind VeloWorld.</p>
-    <!-- Add more content as needed -->
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Learn more about the person behind VeloWorld.</p>
+      <!-- Add more content as needed -->
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2024 VeloWorld. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2024 VeloWorld. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
