@@ -63,29 +63,27 @@ section {
 
 /* Abschnitt: Home */
 #home {
-  background-color: #333;
   color: #fff;
   position: relative;
   min-height: 100vh;
+  background-color: #333; /* Setze die Hintergrundfarbe auf die gleiche Farbe wie das Bild */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Hinzugefügt, um Überlappung zu vermeiden */
+  overflow: hidden;
 }
 
 #home img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: -1; /* Hinzugefügt, um das Bild unter den Text zu legen */
-  background-color: #333; /* Hinzugefügt: Hintergrundfarbe für den Fall, dass das Bild nicht die gesamte Section abdeckt */
+  object-fit: cover; /* Bild an Container anpassen, ohne das Seitenverhältnis zu verzerren */
 }
 
 #home .container {
   position: relative;
   text-align: center;
-  z-index: 1; /* Hinzugefügt, um den Text über das Bild zu legen */
+  z-index: 1;
 }
 
 #home h1 {
@@ -94,6 +92,7 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 
 
 #bikepacking {
