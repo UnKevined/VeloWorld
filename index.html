@@ -9,14 +9,13 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-color: #f4f4f4; /* Hellgrauer Hintergrund */
-      color: #333; /* Standard Textfarbe */
     }
 
+    /* Kopfzeile */
     header {
-      background-color: #333; /* Schwarzer Hintergrund für die Kopfzeile */
+      background-color: #333;
       padding: 15px;
-      color: #fff; /* Textfarbe in der Kopfzeile */
+      color: #fff;
       position: fixed;
       width: 100%;
       top: 0;
@@ -42,30 +41,38 @@
       font-size: 16px;
     }
 
+    /* Abschnitte */
     section {
-      padding: 50px 20px;
+      min-height: 100vh; /* Vollständige Bildschirmhöhe für jeden Abschnitt */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
     }
 
     #home {
-      background-color: #333; /* Schwarzer Hintergrund für den Home-Bereich */
+      background-color: #333;
       color: #fff;
     }
 
     #bikepacking {
-      background-color: #666; /* Dunkelgrauer Hintergrund für den Bikepacking-Bereich */
+      background-color: #666;
       color: #fff;
     }
 
     #map {
-      background-color: #fff; /* Weißer Hintergrund für den Map-Bereich */
+      background-color: #fff;
       color: #333;
     }
 
     #about {
-      background-color: #444; /* Dunkelgrauer Hintergrund für den About Me-Bereich */
+      background-color: #444;
       color: #fff;
     }
 
+    /* Footer */
     footer {
       background-color: #333;
       padding: 10px;
