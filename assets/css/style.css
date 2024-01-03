@@ -61,10 +61,23 @@ section {
   box-sizing: border-box;
 }
 
+/* Abschnitt: Home */
 #home {
   background-color: #333;
   color: #fff;
+  position: relative; /* Damit das Bild relativ zur Container-Position positioniert wird */
 }
+
+#home img {
+  width: 100%; /* Das Bild nimmt 100% der Breite des Containers ein */
+  height: 100%; /* Das Bild nimmt 100% der Höhe des Containers ein */
+  object-fit: cover; /* Das Bild wird so skaliert, dass es den gesamten Container bedeckt */
+}
+
+#home .container {
+  position: relative;
+}
+
 
 #bikepacking {
   background-color: #666;
