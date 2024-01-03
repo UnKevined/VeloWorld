@@ -1,5 +1,9 @@
 /* Reset some default styles */
-body, h1, h2, p, a {
+body,
+h1,
+h2,
+h3,
+p {
     margin: 0;
     padding: 0;
 }
@@ -8,55 +12,56 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-/* Common styles for windows */
-.window {
-    text-align: center;
-    padding: 50px;
-    color: #fff;
-}
-
-.window h1, .window h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.window p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-
-.window a {
-    display: inline-block;
-    background-color: #f8f8f8;
+/* Global styles */
+body {
+    background-color: #f0f0f0;
     color: #333;
-    padding: 10px 20px;
+}
+
+.window {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+header a {
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
 }
 
-.window a:hover {
-    background-color: #333;
-    color: #fff;
+/* Explore section styles */
+#explore {
+    text-align: center;
 }
 
-/* Styles for each section */
+/* Features section styles */
 .background-image {
-    background-image: url('topo_1.jpg');
+    background-image: url('your-background-image.jpg');
     background-size: cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.white-background {
-    background-color: #fff;
-    color: #333;
-}
-
-.black-background {
-    background-color: #333;
     color: #fff;
+    text-align: center;
+    padding: 100px 0;
 }
+
+/* Contact section styles */
+#contact {
+    text-align: center;
+}
+
+/* Footer styles */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Add more styles as needed */
