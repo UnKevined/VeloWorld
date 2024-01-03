@@ -36,7 +36,13 @@ nav a {
 
 /* Abschnitte */
 section {
-  padding: 50px 20px;
+  min-height: 100vh; /* Vollständige Bildschirmhöhe für jeden Abschnitt */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 #home {
