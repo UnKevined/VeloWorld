@@ -1,56 +1,61 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica', sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background: url('topo_1.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    transition: background 0.5s ease;
 }
 
 header {
-    background-color: #333;
+    background-color: #0d0d0d;
+    color: #fff;
     text-align: center;
     padding: 1em;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 main {
     padding: 20px;
 }
 
+.hero {
+    background: url('topo_1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+}
+
 .content {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
+}
+
+.cta {
+    background-color: #0d0d0d;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 .footer {
-    background-color: #333;
+    background-color: #0d0d0d;
+    color: #fff;
     text-align: center;
     padding: 1em;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.section1 {
-    background: #000;
-    height: 100vh;
-    transition: background 0.5s ease;
-}
-
-.section2 {
-    background: #fff;
-    height: 100vh;
-    transition: background 0.5s ease;
-}
-
-.section3 {
-    background: #000;
-    height: 100vh;
-    transition: background 0.5s ease;
 }
