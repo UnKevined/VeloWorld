@@ -31,7 +31,8 @@ nav.nav-dropdown {
   position: absolute;
   top: 60px; /* Höhe der Kopfzeile, falls vorhanden */
   left: 0;
-  background-color: #333;
+  background-color: #fff; /* Hintergrundfarbe auf Weiß ändern */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Einen leichten Schatten hinzufügen */
 }
 
 nav.nav-dropdown.show {
@@ -50,7 +51,7 @@ nav.nav-dropdown li {
 
 nav.nav-dropdown a {
   text-decoration: none;
-  color: #fff;
+  color: #333; /* Schriftfarbe auf Dunkelgrau ändern */
   font-weight: bold;
   font-size: 16px;
 }
