@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta tags for character set and viewport -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Page title -->
   <title>VeloWorld</title>
+  <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <!-- Kopfzeile -->
+  <!-- Header section -->
   <header>
     <div class="container">
-      <!-- Hamburger-Menü-Icon -->
+      <!-- Hamburger menu icon -->
       <div class="menu-icon">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
       </div>
-      <!-- Dropdown-Menü -->
+      <!-- Dropdown menu -->
       <nav class="nav-dropdown">
         <ul>
+          <!-- Navigation links with click event to close the dropdown -->
           <li><a href="#home" onclick="toggleNav()">Home</a></li>
           <li><a href="#bikepacking" onclick="toggleNav()">Bikepacking</a></li>
           <li><a href="#map" onclick="toggleNav()">Map</a></li>
@@ -28,7 +32,7 @@
     </div>
   </header>
 
-  <!-- Abschnitt: Home -->
+  <!-- Home section -->
   <section id="home">
     <div class="container">
       <h1>Welcome to VeloWorld</h1>
@@ -36,60 +40,57 @@
     </div>
   </section>
 
-  <!-- Abschnitt: Bikepacking -->
+  <!-- Bikepacking section -->
   <section id="bikepacking">
     <div class="container">
       <h2>Bikepacking</h2>
       <p>Discover the thrill of bikepacking with VeloWorld.</p>
-      <!-- Weitere Inhalte für den Bikepacking-Abschnitt -->
+      <!-- Additional content for the Bikepacking section can be added here -->
     </div>
   </section>
 
-  <!-- Abschnitt: Interactive Map -->
+  <!-- Interactive Map section -->
   <section id="map">
     <div class="container">
       <h2>Interactive Map</h2>
-      <!-- Füge hier deinen interaktiven Karteninhalt ein -->
+      <!-- Add your interactive map content here -->
     </div>
   </section>
 
-  <!-- Abschnitt: About Me -->
+  <!-- About Me section -->
   <section id="about">
     <div class="container">
       <h2>About Me</h2>
       <p>Learn more about the person behind VeloWorld.</p>
-      <!-- Weitere Inhalte für den "About Me"-Abschnitt -->
+      <!-- Additional content for the "About Me" section can be added here -->
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer section -->
   <footer>
     <div class="container">
       <p>&copy; 2024 VeloWorld. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- ... (previous HTML code) ... -->
-
+  <!-- JavaScript script -->
   <script>
-    function toggleNav() {
-      var navDropdown = document.querySelector('.nav-dropdown');
-      navDropdown.classList.remove('show');
-    }
-
+    // Event listener for when the DOM is fully loaded
     document.addEventListener('DOMContentLoaded', function () {
+      // Selecting elements for menu icon and navigation dropdown
       var menuIcon = document.querySelector('.menu-icon');
       var navDropdown = document.querySelector('.nav-dropdown');
 
+      // Event listener for clicking the menu icon to toggle the dropdown
       menuIcon.addEventListener('click', function () {
         navDropdown.classList.toggle('show');
       });
 
-      // Handle clicks on dropdown links to close the dropdown
+      // Event listeners for dropdown links to close the dropdown
       var navLinks = document.querySelectorAll('.nav-dropdown a');
       navLinks.forEach(function (link) {
         link.addEventListener('click', function () {
-          toggleNav();
+          navDropdown.classList.remove('show');
         });
       });
     });
