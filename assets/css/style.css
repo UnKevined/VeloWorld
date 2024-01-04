@@ -129,10 +129,7 @@ section {
 
 /* Abschnitt: Home */
 #home {
-  background-image: url('img/topo_1_min.svg'); /* Passe den Pfad an */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #000;
   color: #fff;
   position: relative;
   min-height: 100vh;
@@ -152,7 +149,6 @@ section {
   transform: translate(-50%, -50%);
   font-size: 2em;
 }
-
 
 #bikepacking {
   background-color: #666;
