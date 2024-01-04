@@ -1,4 +1,3 @@
-// main.js
 document.addEventListener('DOMContentLoaded', function() {
   var menuIcon = document.getElementById('menu-icon');
   var navDropdown = document.querySelector('.nav-dropdown');
