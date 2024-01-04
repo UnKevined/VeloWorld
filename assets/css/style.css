@@ -29,19 +29,23 @@ nav.nav-dropdown {
   flex-direction: column;
   width: 100%;
   position: absolute;
-  top: 60px; /* Höhe der Kopfzeile, falls vorhanden */
+  top: 60px;
   left: 0;
   background-color: #333;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav.nav-dropdown.show {
   display: flex;
+  flex-direction: column; /* Änderung: Jetzt als Spalte anzeigen */
 }
 
 nav.nav-dropdown ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column; /* Änderung: Jetzt als Spalte anzeigen */
 }
 
 nav.nav-dropdown li {
@@ -54,6 +58,7 @@ nav.nav-dropdown a {
   font-weight: bold;
   font-size: 16px;
 }
+
 
 /* Container für den Inhalt innerhalb der Kopfzeile */
 header .container {
