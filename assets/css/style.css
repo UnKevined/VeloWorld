@@ -124,8 +124,7 @@ section {
   overflow: hidden;
 }
 
-#home img,
-#home svg {
+#home img {
   width: 100%;
   height: 100%;
   object-fit: cover;
