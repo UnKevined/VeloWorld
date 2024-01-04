@@ -192,6 +192,6 @@ footer {
 /* Wenn Bildschirmbreite größer als 768px, setze das Dropdown-Menü zurück zu horizontaler Ausrichtung */
 @media screen and (min-width: 769px) {
   nav.nav-dropdown.show ul {
-    flex-direction: row;
+    flex-direction: column;
   }
 }
