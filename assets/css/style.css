@@ -5,51 +5,6 @@ body {
   overflow-x: hidden; /* Verhindert horizontales Scrollen */
 }
 
-/* Kopfzeile */
-header {
-  background-color: #333;
-  padding: 15px;
-  color: #fff;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  box-sizing: border-box; /* Hinzugefügt, um das Box-Modell zu berücksichtigen */
-}
-
-nav {
-  width: 100%; /* Füllt den verfügbaren Platz in der Kopfzeile aus */
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center; /* Vertikal zentrieren */
-}
-
-nav li {
-  margin: 0 10px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-/* Container für den Inhalt innerhalb der Kopfzeile */
-header .container {
-  max-width: 1200px;
-  margin: 0 auto; /* Zentriert den Container */
-  display: flex;
-  justify-content: space-between; /* Abstand zwischen den Elementen */
-  align-items: center; /* Vertikal zentrieren */
-}
-
 /* Abschnitte */
 section {
   min-height: 100vh;
@@ -127,7 +82,7 @@ footer .container {
 
 /* Hamburger-Menü-Stile */
 .menu-icon {
-  display: none;
+  display: flex;
   flex-direction: column;
   cursor: pointer;
 }
@@ -171,8 +126,8 @@ nav.nav-dropdown a {
   font-size: 16px;
 }
 
-/* Media Query für kleinere Bildschirme */
-@media screen and (max-width: 768px) {
+/* Media Query für alle Bildschirmgrößen */
+@media screen {
   .menu-icon {
     display: flex;
     align-items: center;
