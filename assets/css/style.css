@@ -66,6 +66,12 @@ nav.nav-dropdown a {
   display: block;
 }
 
+/* Wenn Maus über einen Link im Dropdown-Menü fährt */
+nav.nav-dropdown a:hover {
+  font-size: 18px; /* Ändere die Schriftgröße nach Bedarf */
+}
+
+
 
 
 /* Container für den Inhalt innerhalb der Kopfzeile */
