@@ -19,10 +19,10 @@
       <!-- Dropdown-Menü -->
       <nav class="nav-dropdown">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#bikepacking">Bikepacking</a></li>
-          <li><a href="#map">Map</a></li>
-          <li><a href="#about">About Me</a></li>
+          <li><a href="#home" onclick="toggleNav()">Home</a></li>
+          <li><a href="#bikepacking" onclick="toggleNav()">Bikepacking</a></li>
+          <li><a href="#map" onclick="toggleNav()">Map</a></li>
+          <li><a href="#about" onclick="toggleNav()">About Me</a></li>
         </ul>
       </nav>
     </div>
@@ -32,6 +32,7 @@
   <section id="home">
     <div class="container">
       <h1>Welcome to VeloWorld</h1>
+      <img src="img/topo.svg" alt="Welcome Image">
     </div>
   </section>
 
@@ -69,21 +70,19 @@
   </footer>
 
   <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var menuIcon = document.querySelector('.menu-icon');
-    var navDropdown = document.querySelector('.nav-dropdown');
-
-    menuIcon.addEventListener('click', function () {
-      navDropdown.classList.toggle('show');
-    });
-
-    // Add this event listener to close the dropdown when clicking on a link
-    navDropdown.addEventListener('click', function () {
+    function toggleNav() {
+      var navDropdown = document.querySelector('.nav-dropdown');
       navDropdown.classList.remove('show');
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var menuIcon = document.querySelector('.menu-icon');
+      var navDropdown = document.querySelector('.nav-dropdown');
+
+      menuIcon.addEventListener('click', function () {
+        navDropdown.classList.toggle('show');
+      });
     });
-  });
-</script>
-
-
+  </script>
 </body>
 </html>
