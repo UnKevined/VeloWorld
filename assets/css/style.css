@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  overflow-x: hidden; /* Verhindert horizontales Scrollen */
+  overflow-x: hidden;
 }
 
 /* Hamburger-Menü-Stile */
@@ -11,9 +11,10 @@ body {
   flex-direction: column;
   cursor: pointer;
   position: fixed;
-  top: 15px; /* Abstand vom oberen Rand */
-  left: 15px; /* Abstand vom linken Rand */
-  z-index: 1001; /* Über der Kopfzeile, wenn vorhanden */
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+  color: #fff; /* Set hamburger icon color to white */
 }
 
 .bar {
@@ -31,10 +32,10 @@ nav.nav-dropdown {
   flex-direction: column;
   width: 100%;
   position: absolute;
-  top: 60px; /* Höhe der Kopfzeile, falls vorhanden */
+  top: 60px;
   left: 0;
-  background-color: #fff; /* Hintergrundfarbe auf Weiß ändern */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Einen leichten Schatten hinzufügen */
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav.nav-dropdown.show {
@@ -53,35 +54,33 @@ nav.nav-dropdown li {
 
 nav.nav-dropdown a {
   text-decoration: none;
-  color: #333; /* Schriftfarbe auf Dunkelgrau ändern */
+  color: #333;
   font-weight: bold;
   font-size: 16px;
-  display: block; /* Setzt die Anzeige auf Block, damit die Links gestapelt werden */
+  display: block;
 }
 
 /* ... (remaining CSS code) ... */
 
-
 /* Container für den Inhalt innerhalb der Kopfzeile */
-header .container {
+header .container,
+footer .container {
   max-width: 1200px;
-  margin: 0 auto; /* Zentriert den Container */
-  display: flex;
-  justify-content: space-between; /* Abstand zwischen den Elementen */
-  align-items: center; /* Vertikal zentrieren */
-  position: relative;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 /* Kopfzeile */
 header {
-  background-color: transparent; /* Durchsichtig machen */
-  padding: 15px;
+  background-color: #000; /* Set header background color to black */
+  padding: 15px 0;
   color: #fff;
-  box-sizing: border-box; /* Hinzugefügt, um das Box-Modell zu berücksichtigen */
+  box-sizing: border-box;
 }
 
 nav {
-  width: 100%; /* Füllt den verfügbaren Platz in der Kopfzeile aus */
+  width: 100%;
 }
 
 nav ul {
@@ -90,7 +89,7 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: flex-end;
-  align-items: center; /* Vertikal zentrieren */
+  align-items: center;
 }
 
 nav li {
@@ -117,18 +116,18 @@ section {
 
 /* Abschnitt: Home */
 #home {
-  background-color: #000; /* Hintergrundfarbe auf Schwarz setzen */
+  background-color: #000;
   color: #fff;
   position: relative;
-  min-height: 100vh; /* Ändern Sie auf 100vh, um den gesamten Viewport abzudecken */
-  overflow: hidden; /* Verhindert Überlauf und sichtbaren Rahmen */
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 #home img,
 #home svg {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ändere zu "cover", um das Bild die gesamte Fläche abdecken zu lassen */
+  object-fit: cover;
   display: block;
 }
 
@@ -143,7 +142,7 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2em; /* Ändere die Schriftgröße hier nach Bedarf */
+  font-size: 2em;
 }
 
 #bikepacking {
@@ -164,18 +163,13 @@ section {
 /* Footer */
 footer {
   background-color: #333;
-  padding: 10px;
+  padding: 10px 0;
   text-align: center;
   color: #fff;
   position: relative;
   bottom: 0;
   width: 100%;
-}
-
-/* Container für den Inhalt innerhalb des Footers */
-footer .container {
-  max-width: 1200px;
-  margin: 0 auto; /* Zentriert den Container */
+  box-sizing: border-box;
 }
 
 /* Media Query für kleinere Bildschirme */
@@ -189,4 +183,3 @@ footer .container {
     flex-direction: column;
   }
 }
-</style>
