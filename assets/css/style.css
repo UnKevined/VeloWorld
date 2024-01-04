@@ -15,7 +15,7 @@ body {
   left: 15px;
   z-index: 1001;
   /* Update the color to white for better contrast on a black background */
-  color: #000;
+  color: #fff;
 }
 
 .bar {
