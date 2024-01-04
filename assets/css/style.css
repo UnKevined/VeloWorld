@@ -93,7 +93,6 @@ section {
   font-size: 2em; /* Ändere die Schriftgröße hier nach Bedarf */
 }
 
-
 #bikepacking {
   background-color: #666;
   color: #fff;
@@ -125,8 +124,6 @@ footer .container {
   max-width: 1200px;
   margin: 0 auto; /* Zentriert den Container */
 }
-
-/* ... (bestehender CSS-Code bleibt unverändert) */
 
 /* Hamburger-Menü-Stile */
 .menu-icon {
