@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  overflow-x: hidden; /* Verhindert horizontales Scrollen */
+  overflow-x: hidden;
 }
 
 /* Hamburger-Menü-Stile */
@@ -11,9 +11,9 @@ body {
   flex-direction: column;
   cursor: pointer;
   position: fixed;
-  top: 15px; /* Abstand vom oberen Rand */
-  left: 15px; /* Abstand vom linken Rand */
-  z-index: 1001; /* Über der Kopfzeile, wenn vorhanden */
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
 }
 
 .bar {
@@ -31,21 +31,19 @@ nav.nav-dropdown {
   position: absolute;
   top: 60px;
   left: 0;
-  background-color: #333;
+  background-color: #fff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav.nav-dropdown.show {
   display: flex;
-  flex-direction: column; /* Änderung: Jetzt als Spalte anzeigen */
 }
 
 nav.nav-dropdown ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column; /* Änderung: Jetzt als Spalte anzeigen */
+  background-color: #fff; /* Neue Hintergrundfarbe für bessere Sichtbarkeit */
 }
 
 nav.nav-dropdown li {
@@ -54,32 +52,31 @@ nav.nav-dropdown li {
 
 nav.nav-dropdown a {
   text-decoration: none;
-  color: #fff;
+  color: #333;
   font-weight: bold;
   font-size: 16px;
 }
 
-
 /* Container für den Inhalt innerhalb der Kopfzeile */
 header .container {
   max-width: 1200px;
-  margin: 0 auto; /* Zentriert den Container */
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between; /* Abstand zwischen den Elementen */
-  align-items: center; /* Vertikal zentrieren */
+  justify-content: space-between;
+  align-items: center;
   position: relative;
 }
 
 /* Kopfzeile */
 header {
-  background-color: transparent; /* Durchsichtig machen */
+  background-color: transparent;
   padding: 15px;
   color: #fff;
-  box-sizing: border-box; /* Hinzugefügt, um das Box-Modell zu berücksichtigen */
+  box-sizing: border-box;
 }
 
 nav {
-  width: 100%; /* Füllt den verfügbaren Platz in der Kopfzeile aus */
+  width: 100%;
 }
 
 nav ul {
@@ -88,7 +85,7 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: flex-end;
-  align-items: center; /* Vertikal zentrieren */
+  align-items: center;
 }
 
 nav li {
@@ -115,19 +112,12 @@ section {
 
 /* Abschnitt: Home */
 #home {
-  background-color: transparent; /* Hintergrundfarbe auf Schwarz setzen #000 */
+  background-color: transparent;
   color: #fff;
   position: relative;
   min-height: 100vh;
-  overflow: hidden; /* Verhindert Überlauf und sichtbaren Rahmen */
-}
-
-#home img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Änderung: "contain" zu "cover" für vollständige Abdeckung */
-  display: block;
-  border: none; /* Änderung: Border entfernen */
+  overflow: hidden;
+  background: url('img/topo.svg') center/cover no-repeat; /* Neue Hintergrund-Eigenschaften für das Bild */
 }
 
 #home .container {
@@ -141,36 +131,7 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2em; /* Ändere die Schriftgröße hier nach Bedarf */
+  font-size: 2em;
 }
 
-/* Weitere Stile für die Abschnitte hinzufügen */
-
-/* Footer */
-footer {
-  background-color: #333;
-  padding: 10px;
-  text-align: center;
-  color: #fff;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-/* Container für den Inhalt innerhalb des Footers */
-footer .container {
-  max-width: 1200px;
-  margin: 0 auto; /* Zentriert den Container */
-}
-
-/* Media Query für kleinere Bildschirme */
-@media screen and (max-width: 768px) {
-  nav ul {
-    display: none;
-  }
-
-  nav.nav-dropdown.show ul {
-    display: flex;
-    flex-direction: column; /* Anpassung für untereinander stehende Elemente */
-  }
-}
+/* Weitere Stile für die anderen Abschnitte und den Footer hier ergänzen */
