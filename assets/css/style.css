@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Verhindert horizontales Scrollen */
 }
 
 /* Hamburger-Menü-Stile */
@@ -11,9 +11,9 @@ body {
   flex-direction: column;
   cursor: pointer;
   position: fixed;
-  top: 15px;
-  left: 15px;
-  z-index: 1001;
+  top: 15px; /* Abstand vom oberen Rand */
+  left: 15px; /* Abstand vom linken Rand */
+  z-index: 1001; /* Über der Kopfzeile, wenn vorhanden */
 }
 
 .bar {
@@ -29,10 +29,10 @@ nav.nav-dropdown {
   flex-direction: column;
   width: 100%;
   position: absolute;
-  top: 60px;
+  top: 60px; /* Höhe der Kopfzeile, falls vorhanden */
   left: 0;
-  background-color: #fff;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Hintergrundfarbe auf Weiß ändern */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Einen leichten Schatten hinzufügen */
 }
 
 nav.nav-dropdown.show {
@@ -43,7 +43,7 @@ nav.nav-dropdown ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  background-color: #fff; /* Neue Hintergrundfarbe für bessere Sichtbarkeit */
+  text-align: center; /* Zentriere die Links im Dropdown-Menü */
 }
 
 nav.nav-dropdown li {
@@ -52,7 +52,7 @@ nav.nav-dropdown li {
 
 nav.nav-dropdown a {
   text-decoration: none;
-  color: #333;
+  color: #333; /* Schriftfarbe auf Dunkelgrau ändern */
   font-weight: bold;
   font-size: 16px;
 }
@@ -60,23 +60,23 @@ nav.nav-dropdown a {
 /* Container für den Inhalt innerhalb der Kopfzeile */
 header .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; /* Zentriert den Container */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* Abstand zwischen den Elementen */
+  align-items: center; /* Vertikal zentrieren */
   position: relative;
 }
 
 /* Kopfzeile */
 header {
-  background-color: transparent;
+  background-color: transparent; /* Durchsichtig machen */
   padding: 15px;
   color: #fff;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Hinzugefügt, um das Box-Modell zu berücksichtigen */
 }
 
 nav {
-  width: 100%;
+  width: 100%; /* Füllt den verfügbaren Platz in der Kopfzeile aus */
 }
 
 nav ul {
@@ -85,7 +85,7 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: center; /* Vertikal zentrieren */
 }
 
 nav li {
@@ -112,12 +112,20 @@ section {
 
 /* Abschnitt: Home */
 #home {
-  background-color: transparent;
+  background-color: transparent; /* Hintergrundfarbe auf Schwarz setzen #000 */
   color: #fff;
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
-  background: url('img/topo.svg') center/cover no-repeat; /* Neue Hintergrund-Eigenschaften für das Bild */
+  overflow: hidden; /* Verhindert Überlauf und sichtbaren Rahmen */
+}
+
+#home img,
+#home svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Änderung: "contain" zu "cover" für vollständige Abdeckung */
+  display: block;
+  border: none; /* Änderung: Border entfernen */
 }
 
 #home .container {
@@ -131,7 +139,50 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2em;
+  font-size: 2em; /* Ändere die Schriftgröße hier nach Bedarf */
 }
 
-/* Weitere Stile für die anderen Abschnitte und den Footer hier ergänzen */
+#bikepacking {
+  background-color: #666;
+  color: #fff;
+}
+
+#map {
+  background-color: #fff;
+  color: #333;
+}
+
+#about {
+  background-color: #444;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Container für den Inhalt innerhalb des Footers */
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto; /* Zentriert den Container */
+}
+
+/* Media Query für kleinere Bildschirme */
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+
+  nav.nav-dropdown.show ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+</style>
