@@ -122,9 +122,9 @@ section {
 #home svg {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Bild an Container anpassen, ohne das Seitenverhältnis zu verzerren */
-  display: block; /* entfernt den zusätzlichen Platz, der manchmal um Bilder herum erscheint */
-  border: 1px solid #000; /* Schwarzer Rahmen, wenn das Bild nicht verzerren soll */
+  object-fit: cover; /* Änderung: "contain" zu "cover" für vollständige Abdeckung */
+  display: block;
+  border: none; /* Änderung: Border entfernen */
 }
 
 #home .container {
