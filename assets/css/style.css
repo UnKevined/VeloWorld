@@ -129,7 +129,7 @@ section {
 
 /* Abschnitt: Home */
 #home {
-  background-image: url('img/topo_1.svg'); /* Passe den Pfad an */
+  background-image: url('img/topo_1_min.svg'); /* Passe den Pfad an */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
