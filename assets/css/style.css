@@ -23,6 +23,8 @@ body {
   margin: 5px 0;
 }
 
+/* ... (previous CSS code) ... */
+
 /* Dropdown-Menü-Stile */
 nav.nav-dropdown {
   display: none;
@@ -43,7 +45,6 @@ nav.nav-dropdown ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: center; /* Zentriere die Links im Dropdown-Menü */
 }
 
 nav.nav-dropdown li {
@@ -55,7 +56,11 @@ nav.nav-dropdown a {
   color: #333; /* Schriftfarbe auf Dunkelgrau ändern */
   font-weight: bold;
   font-size: 16px;
+  display: block; /* Setzt die Anzeige auf Block, damit die Links gestapelt werden */
 }
+
+/* ... (remaining CSS code) ... */
+
 
 /* Container für den Inhalt innerhalb der Kopfzeile */
 header .container {
@@ -112,10 +117,10 @@ section {
 
 /* Abschnitt: Home */
 #home {
-  background-color: transparent; /* Hintergrundfarbe auf Schwarz setzen #000 */
+  background-color: #000; /* Hintergrundfarbe auf Schwarz setzen */
   color: #fff;
   position: relative;
-  min-height: 100vh;
+  min-height: 100vh; /* Ändern Sie auf 100vh, um den gesamten Viewport abzudecken */
   overflow: hidden; /* Verhindert Überlauf und sichtbaren Rahmen */
 }
 
@@ -123,9 +128,8 @@ section {
 #home svg {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Änderung: "contain" zu "cover" für vollständige Abdeckung */
+  object-fit: cover; /* Ändere zu "cover", um das Bild die gesamte Fläche abdecken zu lassen */
   display: block;
-  border: none; /* Änderung: Border entfernen */
 }
 
 #home .container {
