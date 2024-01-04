@@ -69,9 +69,9 @@ footer .container {
 
 /* Kopfzeile */
 header {
-  background-color: #fff; /* Set header background color to white */
+  background-color: #000; /* Set header background color to black */
   padding: 15px 0;
-  color: #000;
+  color: #fff;
   box-sizing: border-box;
 }
 
