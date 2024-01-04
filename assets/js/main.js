@@ -8,14 +8,16 @@ function toggleNav() {
 
 document.addEventListener('DOMContentLoaded', function () {
   // Selecting elements for menu icon and navigation dropdown
-  var menuIcon = document.getElementById('menu-icon');
+  var menuIcon = document.querySelector('.menu-icon'); // Use .menu-icon here
   var navDropdown = document.querySelector('.nav-dropdown');
 
-
-  // Event listener for clicking the menu icon to toggle the dropdown
-  menuIcon.addEventListener('click', function () {
-    navDropdown.classList.toggle('show');
-  });
+  // Check if the menuIcon element exists before adding event listeners
+  if (menuIcon) {
+    // Event listener for clicking the menu icon to toggle the dropdown
+    menuIcon.addEventListener('click', function () {
+      navDropdown.classList.toggle('show');
+    });
+  }
 
   // Event listeners for dropdown links to close the dropdown
   var navLinks = document.querySelectorAll('.nav-dropdown a');
