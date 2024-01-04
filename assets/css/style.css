@@ -125,3 +125,65 @@ footer .container {
   max-width: 1200px;
   margin: 0 auto; /* Zentriert den Container */
 }
+
+/* ... (bestehender CSS-Code bleibt unverändert) */
+
+/* Hamburger-Menü-Stile */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+/* Dropdown-Menü-Stile */
+nav.nav-dropdown {
+  display: flex;
+}
+
+nav.nav-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav.nav-dropdown li {
+  margin: 0 10px;
+}
+
+nav.nav-dropdown a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Media Query für kleinere Bildschirme */
+@media screen and (max-width: 768px) {
+  nav.nav-dropdown {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Höhe der Kopfzeile */
+    left: 0;
+    background-color: #333;
+  }
+
+  nav.nav-dropdown.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: flex;
+    align-items: center;
+  }
+}
+
