@@ -30,13 +30,14 @@ body {
 nav.nav-dropdown {
   display: none;
   flex-direction: column;
-  width: 100%;
+  width: 100vw; /* Change width to 100vw (viewport width) */
   position: absolute;
   top: 60px;
   left: 0;
   background-color: #fff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 
 nav.nav-dropdown.show {
   display: flex;
