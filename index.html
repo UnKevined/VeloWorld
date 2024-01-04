@@ -11,34 +11,33 @@
 </head>
 <body>
   <!-- Header section -->
-<header>
-  <div class="container">
-    <!-- Hamburger menu icon -->
-    <div class="menu-icon" id="menu-icon">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
+  <header>
+    <div class="container">
+      <!-- Hamburger menu icon -->
+      <div class="menu-icon" id="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <!-- Dropdown menu -->
+      <nav class="nav-dropdown">
+        <ul>
+          <!-- Navigation links without onclick attribute -->
+          <li><a href="#home">Home</a></li>
+          <li><a href="#bikepacking">Bikepacking</a></li>
+          <li><a href="#map">Map</a></li>
+          <li><a href="#about">About Me</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <!-- Dropdown menu -->
-    <nav class="nav-dropdown">
-      <ul>
-        <!-- Navigation links with click event to close the dropdown -->
-        <li><a href="#home" onclick="toggleNav()">Home</a></li>
-        <li><a href="#bikepacking" onclick="toggleNav()">Bikepacking</a></li>
-        <li><a href="#map" onclick="toggleNav()">Map</a></li>
-        <li><a href="#about" onclick="toggleNav()">About Me</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
+  </header>
 
   <!-- Home section -->
   <section id="home">
     <div class="container">
-      <h1>Welcome to VeloWorld</h1>
-      <img src="img/topo.png" alt="Welcome Image">
+      <h2>Welcome to VeloWorld</h2>
+      <!-- Image and content removed -->
     </div>
   </section>
   
@@ -68,7 +67,6 @@
     </div>
   </section>
 
-
   <!-- Footer section -->
   <footer>
     <div class="container">
@@ -78,6 +76,5 @@
 
   <!-- JavaScript script -->
   <script src="assets/js/main.js"></script>
-  
 </body>
 </html>
