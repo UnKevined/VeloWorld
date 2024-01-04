@@ -6,7 +6,7 @@ body {
 }
 
 /* Hamburger-Menü-Stile */
-.menu-icon {
+.menu-icon > div {
   display: flex;
   flex-direction: column;
   cursor: pointer;
