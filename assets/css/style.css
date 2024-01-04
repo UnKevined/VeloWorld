@@ -13,7 +13,7 @@ body {
   position: fixed;
   top: 15px;
   left: 15px;
-  z-index: 1001;
+  z-index: 1002;
   /* Update the color to white for better contrast on a black background */
   color: #fff;
 }
