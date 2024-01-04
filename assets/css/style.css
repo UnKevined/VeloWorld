@@ -30,7 +30,7 @@ nav.nav-dropdown {
   display: none;
   flex-direction: column;
   width: 100vw; /* Change width to 100vw (viewport width) */
-  position: absolute;
+  position: fixed;
   top: 60px;
   left: 0;
   /* Update the background color for better contrast on a black background */
