@@ -26,7 +26,6 @@ body {
 /* Dropdown-Menü-Stile */
 nav.nav-dropdown {
   display: none;
-  flex-direction: column;
   width: 100%;
   position: absolute;
   top: 60px; /* Höhe der Kopfzeile, falls vorhanden */
@@ -37,12 +36,18 @@ nav.nav-dropdown {
 
 nav.nav-dropdown.show {
   display: flex;
+  flex-direction: column; /* Änderung: Anordnung in einer Spalte */
+  background-color: #fff; /* Hintergrundfarbe auf Weiß ändern */
+  padding: 10px; /* Innenabstand hinzufügen */
+  border: 1px solid #ccc; /* Rahmen hinzufügen */
 }
 
 nav.nav-dropdown ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column; /* Änderung: Anordnung in einer Spalte */
 }
 
 nav.nav-dropdown li {
@@ -55,6 +60,7 @@ nav.nav-dropdown a {
   font-weight: bold;
   font-size: 16px;
 }
+
 
 /* Container für den Inhalt innerhalb der Kopfzeile */
 header .container {
