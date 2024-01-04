@@ -5,6 +5,98 @@ body {
   overflow-x: hidden; /* Verhindert horizontales Scrollen */
 }
 
+/* Hamburger-Menü-Stile */
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: fixed;
+  top: 15px; /* Abstand vom oberen Rand */
+  left: 15px; /* Abstand vom linken Rand */
+  z-index: 1001; /* Über der Kopfzeile, wenn vorhanden */
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+/* Dropdown-Menü-Stile */
+nav.nav-dropdown {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 60px; /* Höhe der Kopfzeile, falls vorhanden */
+  left: 0;
+  background-color: #333;
+}
+
+nav.nav-dropdown.show {
+  display: flex;
+}
+
+nav.nav-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav.nav-dropdown li {
+  margin: 10px 0;
+}
+
+nav.nav-dropdown a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Container für den Inhalt innerhalb der Kopfzeile */
+header .container {
+  max-width: 1200px;
+  margin: 0 auto; /* Zentriert den Container */
+  display: flex;
+  justify-content: space-between; /* Abstand zwischen den Elementen */
+  align-items: center; /* Vertikal zentrieren */
+  position: relative;
+}
+
+/* Kopfzeile */
+header {
+  background-color: transparent; /* Durchsichtig machen */
+  padding: 15px;
+  color: #fff;
+  box-sizing: border-box; /* Hinzugefügt, um das Box-Modell zu berücksichtigen */
+}
+
+nav {
+  width: 100%; /* Füllt den verfügbaren Platz in der Kopfzeile aus */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* Vertikal zentrieren */
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
 /* Abschnitte */
 section {
   min-height: 100vh;
@@ -48,6 +140,7 @@ section {
   font-size: 2em; /* Ändere die Schriftgröße hier nach Bedarf */
 }
 
+
 #bikepacking {
   background-color: #666;
   color: #fff;
@@ -80,59 +173,8 @@ footer .container {
   margin: 0 auto; /* Zentriert den Container */
 }
 
-/* Hamburger-Menü-Stile */
-.menu-icon {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 5px 0;
-}
-
-/* Dropdown-Menü-Stile */
-nav.nav-dropdown {
-  display: none;
-  flex-direction: column;
-  width: 100%;
-  position: absolute;
-  top: 60px; /* Höhe der Kopfzeile */
-  left: 0;
-  background-color: #333;
-}
-
-nav.nav-dropdown.show {
-  display: flex;
-}
-
-nav.nav-dropdown ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav.nav-dropdown li {
-  margin: 10px 0;
-}
-
-nav.nav-dropdown a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-/* Media Query für alle Bildschirmgrößen */
-@media screen {
-  .menu-icon {
-    display: flex;
-    align-items: center;
-  }
-
+/* Media Query für kleinere Bildschirme */
+@media screen and (max-width: 768px) {
   nav ul {
     display: none;
   }
