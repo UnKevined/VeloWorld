@@ -14,17 +14,15 @@ body {
   top: 15px;
   left: 15px;
   z-index: 1001;
-  color: #fff; /* Set hamburger icon color to white */
+  color: #fff; /* Set hamburger icon color to black */
 }
 
 .bar {
   width: 25px;
   height: 3px;
-  background-color: #fff;
+  background-color: #000;
   margin: 5px 0;
 }
-
-/* ... (previous CSS code) ... */
 
 /* Dropdown-Menü-Stile */
 nav.nav-dropdown {
@@ -34,10 +32,9 @@ nav.nav-dropdown {
   position: absolute;
   top: 60px;
   left: 0;
-  background-color: #fff;
+  background-color: #000; /* Set dropdown background color to black */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 
 nav.nav-dropdown.show {
   display: flex;
@@ -55,13 +52,11 @@ nav.nav-dropdown li {
 
 nav.nav-dropdown a {
   text-decoration: none;
-  color: #333;
+  color: #fff; /* Set dropdown link color to white */
   font-weight: bold;
   font-size: 16px;
   display: block;
 }
-
-/* ... (remaining CSS code) ... */
 
 /* Container für den Inhalt innerhalb der Kopfzeile */
 header .container,
@@ -74,9 +69,9 @@ footer .container {
 
 /* Kopfzeile */
 header {
-  background-color: #000; /* Set header background color to black */
+  background-color: #000; /* Set header background color to white */
   padding: 15px 0;
-  color: #fff;
+  color: #000;
   box-sizing: border-box;
 }
 
@@ -122,13 +117,6 @@ section {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-}
-
-#home img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 #home .container {
