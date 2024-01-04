@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   overflow-x: hidden;
-  background-image: url('img/bild.jpg'); /* Hintergrundbild für die gesamte Seite */
+  background-image: url('img/topo_1_min.svg'); /* Hintergrundbild für die gesamte Seite */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
