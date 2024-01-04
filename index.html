@@ -68,5 +68,17 @@
       <p>&copy; 2024 VeloWorld. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var menuIcon = document.querySelector('.menu-icon');
+    var navDropdown = document.querySelector('.nav-dropdown');
+
+    menuIcon.addEventListener('click', function () {
+      navDropdown.classList.toggle('show');
+    });
+  });
+</script>
+
 </body>
 </html>
