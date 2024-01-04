@@ -38,7 +38,6 @@ nav.nav-dropdown {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
 nav.nav-dropdown.show {
   display: flex;
 }
@@ -122,13 +121,6 @@ section {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-}
-
-#home img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 #home .container {
