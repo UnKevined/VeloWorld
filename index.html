@@ -69,15 +69,21 @@
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var menuIcon = document.querySelector('.menu-icon');
-      var navDropdown = document.querySelector('.nav-dropdown');
+  document.addEventListener('DOMContentLoaded', function () {
+    var menuIcon = document.querySelector('.menu-icon');
+    var navDropdown = document.querySelector('.nav-dropdown');
 
-      menuIcon.addEventListener('click', function () {
-        navDropdown.classList.toggle('show');
-      });
+    menuIcon.addEventListener('click', function () {
+      navDropdown.classList.toggle('show');
     });
-  </script>
+
+    // Add this event listener to close the dropdown when clicking on a link
+    navDropdown.addEventListener('click', function () {
+      navDropdown.classList.remove('show');
+    });
+  });
+</script>
+
 
 </body>
 </html>
