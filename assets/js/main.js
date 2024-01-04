@@ -1,8 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM content loaded');
+
   var menuIcon = document.getElementById('menu-icon');
   var navDropdown = document.querySelector('.nav-dropdown');
 
+  if (!menuIcon) {
+    console.error('Menu icon not found');
+    return;
+  }
+
+  if (!navDropdown) {
+    console.error('Nav dropdown not found');
+    return;
+  }
+
   menuIcon.addEventListener('click', function() {
+    console.log('Menu icon clicked');
     navDropdown.classList.toggle('show');
   });
 
@@ -28,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Close the dropdown when clicking outside of it
   window.addEventListener('click', function(event) {
+    console.log('Window clicked');
     if (!event.target.matches('#menu-icon') && !event.target.closest('.nav-dropdown')) {
       navDropdown.classList.remove('show');
     }
