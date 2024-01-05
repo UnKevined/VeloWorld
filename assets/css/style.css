@@ -163,8 +163,14 @@ section {
 
 /* Abschnitt: Map */
 #map {
-  background-color: #fff;
-  color: #333;
+  background-color: #fff; /* Hintergrundfarbe für den Map-Bereich */
+  color: #333; /* Textfarbe für den Map-Bereich */
+  min-height: 500px; /* Mindesthöhe für den Map-Bereich anpassen */
+}
+
+/* Stil für den Leaflet-Kartencontainer */
+#map-container {
+  height: 100%; /* Höhe des Kartencontainers auf 100% setzen */
 }
 
 /* Abschnitt: About */
