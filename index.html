@@ -4,6 +4,7 @@
   <!-- Meta tags for character set and viewport -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <!-- Page title -->
   <title>VeloWorld</title>
   <!-- Link to external stylesheet -->
@@ -52,11 +53,26 @@
   
   <!-- Interactive Map section -->
   <section id="map">
-    <div class="container">
-      <h2>Interactive Map</h2>
-      <!-- Add your interactive map content here -->
-    </div>
+    <!-- Karte erstellen -->
+    <div id="map-container" style="height: 400px;"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-gpx/dist/leaflet-gpx.js"></script> <!-- Leaflet GPX Plugin -->
+    <script>
+      var map = L.map('map-container').setView([51.505, -0.09], 13);
+  
+      // OpenStreetMap als Kartenprovider
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+  
+      // GPX-Datei zur Karte hinzufügen
+      var gpx = 'path/to/your/file.gpx'; // Pfad zu deiner GPX-Datei
+      new L.GPX(gpx, {async: true}).on('loaded', function(e) {
+        map.fitBounds(e.target.getBounds());
+      }).addTo(map);
+    </script>
   </section>
+
   
   <!-- About Me section -->
   <section id="about">
