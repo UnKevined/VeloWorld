@@ -6,7 +6,7 @@ body {
 }
 
 /* Setze das Hintergrundbild für den Header und die Home-Section */
-body, #home, header {
+#home, header {
   background-image: url('../img/bild-min-min (1) (1).png'); /* Pfad zum Hintergrundbild */
   background-size: cover;
   background-position: center;
