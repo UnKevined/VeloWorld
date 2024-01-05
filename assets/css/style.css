@@ -3,10 +3,6 @@ body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   overflow-x: hidden;
-  background-image: url('img/bild-min-min (1) (1).png'); /* Hintergrundbild für die gesamte Seite */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 /* Hamburger-Menü-Stile */
@@ -75,6 +71,9 @@ nav.nav-dropdown a:hover {
   font-size: 18px; /* Ändere die Schriftgröße nach Bedarf */
 }
 
+
+
+
 /* Container für den Inhalt innerhalb der Kopfzeile */
 header .container,
 footer .container {
@@ -82,16 +81,14 @@ footer .container {
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
-  position: relative;
-  z-index: 1001; /* Einen Z-Index weniger als das Hamburger-Icon, um es zu überlagern */
 }
 
 /* Kopfzeile */
 header {
   /* Update the background color for better contrast on a black background */
-  background-color: transparent; /* Keine Hintergrundfarbe, da das Bild darunter liegt */
+  background-color: #000;
   padding: 15px 0;
-  color: #fff;
+  color: #000;
   box-sizing: border-box;
 }
 
@@ -132,11 +129,11 @@ section {
 
 /* Abschnitt: Home */
 #home {
+  background-color: #000;
   color: #fff;
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  padding: 20px; /* Optional: Füge zusätzlichen Abstand hinzu */
 }
 
 #home .container {
