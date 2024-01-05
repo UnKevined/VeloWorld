@@ -129,7 +129,7 @@ section {
 
 /* Abschnitt: Home */
 #home {
-  background-image: url('img/bild-min-min (1) (1).png'); /* Pfad zum Hintergrundbild */
+  background-image: url('../img/bild-min-min (1) (1).png'); /* Pfad zum Hintergrundbild */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
