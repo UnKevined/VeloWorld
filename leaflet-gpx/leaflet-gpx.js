@@ -47,9 +47,9 @@ var _DAY_IN_MILLIS = 24 * _HOUR_IN_MILLIS;
 var _GPX_STYLE_NS = 'http://www.topografix.com/GPX/gpx_style/0/2';
 
 var _DEFAULT_MARKER_OPTS = {
-  startIconUrl: 'pin-icon-start.png',
-  endIconUrl: 'pin-icon-end.png',
-  shadowUrl: 'pin-shadow.png',
+  startIconUrl: 'https://unkevined.github.io/VeloWorld/leaflet/images/pin-icon-start.png',
+  endIconUrl: 'https://unkevined.github.io/VeloWorld/leaflet/images/pin-icon-end.png',
+  shadowUrl: 'https://unkevined.github.io/VeloWorld/leaflet/images/pin-shadow.png',
   wptIcons: [],
   wptIconsType: [],
   wptIconUrls : {
