@@ -69,7 +69,7 @@
       }).addTo(map);
   
       // GPX-Datei zur Karte hinzufügen
-      var gpx = 'gpx/2022-05-05_759176686_RAD RACE 96h 2022  - Stage 1.gpx'; // Pfad zu deiner GPX-Datei
+      var gpx = '96h_Stage_1.gpx'; // Pfad zu deiner GPX-Datei
       new L.GPX(gpx, {async: true}).on('loaded', function(e) {
         map.fitBounds(e.target.getBounds());
       }).addTo(map);
