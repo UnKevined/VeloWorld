@@ -53,10 +53,10 @@ var _DEFAULT_MARKER_OPTS = {
   wptIcons: [],
   wptIconsType: [],
   wptIconUrls : {
-    '': 'pin-icon-wpt.png',
+    '': 'https://unkevined.github.io/VeloWorld/leaflet/images/pin-icon-wpt.png',
   },
   wptIconTypeUrls : {
-    '': 'pin-icon-wpt.png',
+    '': 'https://unkevined.github.io/VeloWorld/leaflet/images/pin-icon-wpt.png',
   },
   pointMatchers: [],
   iconSize: [33, 45],
@@ -65,6 +65,7 @@ var _DEFAULT_MARKER_OPTS = {
   shadowAnchor: [16, 47],
   clickable: false
 };
+
 var _DEFAULT_POLYLINE_OPTS = {
   color: 'blue'
 };
