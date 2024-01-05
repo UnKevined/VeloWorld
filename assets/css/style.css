@@ -129,11 +129,16 @@ section {
 
 /* Abschnitt: Home */
 #home {
-  background-color: #000;
+  background-image: url('img/bild-min-min (1) (1).png'); /* Pfad zum Hintergrundbild */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
   position: relative;
   min-height: 100vh;
   overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 #home .container {
@@ -149,6 +154,7 @@ section {
   transform: translate(-50%, -50%);
   font-size: 2em;
 }
+
 
 #bikepacking {
   background-color: #666;
