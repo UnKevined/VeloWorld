@@ -163,7 +163,7 @@ section {
 
 /* Abschnitt: Map */
 #map {
-  background-color: #fff; /* Hintergrundfarbe für den Map-Bereich */
+  background-color: transparent; /* Hintergrundfarbe für den Map-Bereich */
   color: #333; /* Textfarbe für den Map-Bereich */
   min-height: 500px; /* Mindesthöhe für den Map-Bereich anpassen */
 }
