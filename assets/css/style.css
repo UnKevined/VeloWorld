@@ -85,16 +85,20 @@ footer .container {
 
 /* Kopfzeile */
 header {
-  /* Update the background color for better contrast on a black background */
-  background-color: #000;
+  background-image: url('img/bild-min-min (1) (1).png'); /* Pfad zum Hintergrundbild */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 15px 0;
-  color: #000;
+  color: #fff;
   box-sizing: border-box;
 }
 
 nav {
-  width: 100%;
+  /* Hintergrundfarbe entfernen, wenn nicht benötigt */
+  background-color: transparent;
 }
+
 
 nav ul {
   list-style: none;
