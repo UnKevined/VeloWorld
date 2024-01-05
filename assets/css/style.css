@@ -5,6 +5,14 @@ body {
   overflow-x: hidden;
 }
 
+/* Setze das Hintergrundbild für den Header und die Home-Section */
+body, #home, header {
+  background-image: url('../img/bild-min-min (1) (1).png'); /* Pfad zum Hintergrundbild */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* Hamburger-Menü-Stile */
 .menu-icon {
   display: flex;
@@ -80,10 +88,6 @@ footer .container {
 
 /* Kopfzeile */
 header {
-  background-image: url('../img/bild-min-min (1) (1).png'); /* Pfad zum Hintergrundbild */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   padding: 15px 0;
   color: #fff;
   box-sizing: border-box;
@@ -124,12 +128,11 @@ section {
   box-sizing: border-box;
 }
 
-/* Abschnitt: Home */
+/* Home Section */
 #home {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: inherit; /* Erbe das Hintergrundbild des Headers */
   color: #fff;
   position: relative;
   min-height: 100vh;
