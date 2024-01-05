@@ -3,10 +3,6 @@ body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   overflow-x: hidden;
-  background-image: url('../img/bild-min-min (1) (1).png'); /* Pfad zum Hintergrundbild */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 /* Hamburger-Menü-Stile */
@@ -84,6 +80,7 @@ footer .container {
 
 /* Kopfzeile */
 header {
+  background-image: url('../img/bild-min-min (1) (1).png'); /* Pfad zum Hintergrundbild */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -132,6 +129,7 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-image: inherit; /* Erbe das Hintergrundbild des Headers */
   color: #fff;
   position: relative;
   min-height: 100vh;
@@ -154,7 +152,23 @@ section {
   font-size: 2em;
 }
 
-/* ... (der Rest des Codes bleibt unverändert) */
+/* Abschnitt: Bikepacking */
+#bikepacking {
+  background-color: #666;
+  color: #fff;
+}
+
+/* Abschnitt: Map */
+#map {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Abschnitt: About */
+#about {
+  background-color: #444;
+  color: #fff;
+}
 
 /* Footer */
 footer {
