@@ -4,11 +4,12 @@
   <!-- Meta tags for character set and viewport -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <!-- Page title -->
-  <title>VeloWorld</title>
   <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="leaflet/leaflet.css" />
+  <!-- Page title -->
+  <title>VeloWorld</title>
 </head>
 <body>
   <!-- Header section -->
@@ -55,8 +56,10 @@
   <section id="map">
     <!-- Karte erstellen -->
     <div id="map-container" style="height: 400px;"></div>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet-gpx/dist/leaflet-gpx.js"></script> <!-- Leaflet GPX Plugin -->
+    <!-- Leaflet JS -->
+    <script src="leaflet/leaflet.js"></script>
+    <!-- Leaflet GPX Plugin -->
+    <script src="leaflet/leaflet-src.js"></script>
     <script>
       var map = L.map('map-container').setView([51.505, -0.09], 13);
   
