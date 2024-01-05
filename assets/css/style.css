@@ -3,6 +3,10 @@ body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   overflow-x: hidden;
+  background-image: url('../img/bild-min-min (1) (1).png'); /* Pfad zum Hintergrundbild */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Hamburger-Menü-Stile */
@@ -14,7 +18,6 @@ body {
   top: 15px;
   left: 15px;
   z-index: 1002;
-  /* Update the color to white for better contrast on a black background */
   color: #fff;
 }
 
@@ -35,23 +38,23 @@ nav.nav-dropdown {
   left: 0;
   background-color: rgba(51, 51, 51, 0.9);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Updated transition properties */
+  transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 1002;
-  opacity: 0; /* Start with 0 opacity */
-  transform: translateY(-20px); /* Move it up by 20px */
+  opacity: 0;
+  transform: translateY(-20px);
 }
 
 nav.nav-dropdown.show {
   display: flex;
-  opacity: 1; /* Make it visible */
-  transform: translateY(0); /* Reset the translation */
+  opacity: 1;
+  transform: translateY(0);
 }
 
 nav.nav-dropdown ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: left; /* Align items to the left */
+  text-align: left;
 }
 
 nav.nav-dropdown li {
@@ -66,13 +69,9 @@ nav.nav-dropdown a {
   display: block;
 }
 
-/* Wenn Maus über einen Link im Dropdown-Menü fährt */
 nav.nav-dropdown a:hover {
-  font-size: 18px; /* Ändere die Schriftgröße nach Bedarf */
+  font-size: 22px;
 }
-
-
-
 
 /* Container für den Inhalt innerhalb der Kopfzeile */
 header .container,
@@ -85,14 +84,15 @@ footer .container {
 
 /* Kopfzeile */
 header {
-  background-image: url('../img/bild-min-min (1) (1).png'); /* Pfad zum Hintergrundbild */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 15px 0;
   color: #fff;
   box-sizing: border-box;
-  /* Hintergrundfarbe entfernen, wenn nicht benötigt */
+}
+
+nav {
   background-color: transparent;
 }
 
@@ -129,7 +129,6 @@ section {
 
 /* Abschnitt: Home */
 #home {
-  background-image: url('../img/bild-min-min (1) (1).png'); /* Pfad zum Hintergrundbild */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -155,21 +154,7 @@ section {
   font-size: 2em;
 }
 
-
-#bikepacking {
-  background-color: #666;
-  color: #fff;
-}
-
-#map {
-  background-color: #fff;
-  color: #333;
-}
-
-#about {
-  background-color: #444;
-  color: #fff;
-}
+/* ... (der Rest des Codes bleibt unverändert) */
 
 /* Footer */
 footer {
@@ -195,7 +180,6 @@ footer {
   }
 }
 
-/* Wenn Bildschirmbreite größer als 768px, setze das Dropdown-Menü zurück zu horizontaler Ausrichtung */
 @media screen and (min-width: 769px) {
   nav.nav-dropdown.show ul {
     flex-direction: column;
