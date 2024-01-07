@@ -6,13 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <!-- OpenLayers CSS -->
-  <!--link rel="stylesheet" href="node_modules/ol/ol.css"-->
-  <script src="https://cdn.jsdelivr.net/npm/ol@v8.2.0/dist/ol.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.2.0/ol.css">
-
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="leaflet/leaflet.css" />
+  <!-- Page title -->
   <title>VeloWorld</title>
-
 </head>
 <body>
   <!-- Header section -->
@@ -54,16 +51,32 @@
       <!-- Additional content for the Bikepacking section can be added here -->
     </div>
   </section>
-
+  
   <!-- Interactive Map section -->
   <section id="map">
-    <div class="container">
-      <h2>Interactive Map</h2>
-      <!-- Karte erstellen -->
-      <div id="map-container" style="height: 400px;"></div>
-    </div>
+    <!-- Karte erstellen -->
+    <div id="map-container" style="height: 400px;"></div>
+    <!-- Leaflet JS -->
+    <script src="leaflet/leaflet.js"></script>
+    <!-- Leaflet GPX Plugin -->
+    <script src="leaflet-gpx/leaflet-gpx.js"></script>
+    <script>
+      var map = L.map('map-container').setView([51.505, -0.09], 13);
+  
+      // OpenStreetMap als Kartenprovider
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+  
+      // GPX-Datei zur Karte hinzufügen
+      var gpx = 'gpx/96h_Stage_1.gpx'; // Pfad zu deiner GPX-Datei
+      new L.GPX(gpx, {async: true}).on('loaded', function(e) {
+        map.fitBounds(e.target.getBounds());
+      }).addTo(map);
+    </script>
   </section>
 
+  
   <!-- About Me section -->
   <section id="about">
     <div class="container">
@@ -81,7 +94,6 @@
   </footer>
 
   <!-- JavaScript script -->
-  <script type="module" src="assets/js/main.js"></script>
-
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
