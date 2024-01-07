@@ -1,12 +1,14 @@
 // main.js
-import 'node_modules/ol/ol.css';
+//import 'node_modules/ol/ol.css';
+
+
 import GPX from 'node_modules/ol/format/GPX.js';
 import Map from 'node_modules/ol/Map.js';
+import VectorSource from 'node_modules/ol/source/Vector.js';
 import View from 'node_modules/ol/View.js';
-import TileLayer from 'node_modules/ol/Tile.js';
-import { Circle as CircleStyle, Fill, Stroke, Style } from 'node_modules/ol/style.js';
-import { OSM, TileWMS, Vector as VectorSource } from 'node_modules/ol/source.js';
-import { Vector as VectorLayer, Vector as VectorLayer } from 'node_modules/ol/layer.js';
+import XYZ from 'node_modules/ol/source/XYZ.js';
+import {Circle as CircleStyle, Fill, Stroke, Style} from 'node_modules/ol/style.js';
+import {Tile as TileLayer, Vector as VectorLayer} from 'node_modules/ol/layer.js';
 
 document.addEventListener('DOMContentLoaded', function () {
   console.log('DOM content loaded');
@@ -64,13 +66,13 @@ document.addEventListener('DOMContentLoaded', function () {
     '<a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>';
 
   const raster = new TileLayer({
-    source: new TileWMS({
+    source: new XYZ({
       attributions: attributions,
       url: 'https://api.maptiler.com/tiles/satellite/{z}/{x}/{y}.jpg?key=' + key,
       maxZoom: 20,
     }),
   });
-
+  
   const style = {
     'Point': new Style({
       image: new CircleStyle({
@@ -97,35 +99,54 @@ document.addEventListener('DOMContentLoaded', function () {
       }),
     }),
   };
-
+  
   const vector = new VectorLayer({
     source: new VectorSource({
-      url: 'gpx/96h_Stage_1.gpx',
+      url: 'data/gpx/fells_loop.gpx',
       format: new GPX(),
     }),
     style: function (feature) {
       return style[feature.getGeometry().getType()];
     },
   });
-
+  
   const map = new Map({
     layers: [raster, vector],
-    target: 'map-container', // Use the ID of your map container
+    target: document.getElementById('map'),
     view: new View({
       center: [-7916041.528716288, 5228379.045749711],
       zoom: 12,
     }),
   });
-
+  
   const displayFeatureInfo = function (pixel) {
-    // ... (your existing display feature info code)
+    const features = [];
+    map.forEachFeatureAtPixel(pixel, function (feature) {
+      features.push(feature);
+    });
+    if (features.length > 0) {
+      const info = [];
+      let i, ii;
+      for (i = 0, ii = features.length; i < ii; ++i) {
+        info.push(features[i].get('desc'));
+      }
+      document.getElementById('info').innerHTML = info.join(', ') || '(unknown)';
+      map.getTarget().style.cursor = 'pointer';
+    } else {
+      document.getElementById('info').innerHTML = '&nbsp;';
+      map.getTarget().style.cursor = '';
+    }
   };
-
+  
   map.on('pointermove', function (evt) {
-    // ... (your existing pointer move code)
+    if (evt.dragging) {
+      return;
+    }
+    const pixel = map.getEventPixel(evt.originalEvent);
+    displayFeatureInfo(pixel);
   });
-
+  
   map.on('click', function (evt) {
-    // ... (your existing click code)
+    displayFeatureInfo(evt.pixel);
   });
 });
