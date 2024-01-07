@@ -2,7 +2,7 @@
 //import 'node_modules/ol/ol.css';
 
 
-import GPX from 'node_modules/ol/format/GPX.js';
+import GPX from './node_modules/ol/format/GPX.js';
 import Map from 'node_modules/ol/Map.js';
 import VectorSource from 'node_modules/ol/source/Vector.js';
 import View from 'node_modules/ol/View.js';
