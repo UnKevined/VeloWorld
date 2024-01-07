@@ -170,7 +170,10 @@ section {
 
 /* Stil für den Leaflet-Kartencontainer */
 #map-container {
-  height: 100%; /* Höhe des Kartencontainers auf 100% setzen */
+  height: 500px; /* Ändere die Höhe nach Bedarf */
+  z-index: 1;
+}
+
 }
 
 /* Abschnitt: About */
