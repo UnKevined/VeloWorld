@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <!-- OpenLayers CSS -->
-  <link rel="stylesheet" href="https://openlayers.org/en/v8.2.0/css/ol.css" type="text/css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="leaflet/leaflet.css" />
   <!-- Page title -->
   <title>VeloWorld</title>
 </head>
@@ -55,8 +55,27 @@
   <!-- Interactive Map section -->
   <section id="map">
     <!-- Karte erstellen -->
-    <div id="map-container" class="map"></div>
+    <div id="map-container" style="height: 400px;"></div>
+    <!-- Leaflet JS -->
+    <script src="leaflet/leaflet.js"></script>
+    <!-- Leaflet GPX Plugin -->
+    <script src="leaflet-gpx/leaflet-gpx.js"></script>
+    <script>
+      var map = L.map('map-container').setView([51.505, -0.09], 13);
+  
+      // OpenStreetMap als Kartenprovider
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+  
+      // GPX-Datei zur Karte hinzufügen
+      var gpx = 'gpx/96h_Stage_1.gpx'; // Pfad zu deiner GPX-Datei
+      new L.GPX(gpx, {async: true}).on('loaded', function(e) {
+        map.fitBounds(e.target.getBounds());
+      }).addTo(map);
+    </script>
   </section>
+
   
   <!-- About Me section -->
   <section id="about">
@@ -76,60 +95,5 @@
 
   <!-- JavaScript script -->
   <script src="assets/js/main.js"></script>
-  <!-- OpenLayers JS -->
-  <script src="https://openlayers.org/en/v8.2.0/build/ol.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var raster = new ol.layer.Tile({
-        source: new ol.source.OSM()
-      });
-
-      var style = {
-        'Point': new ol.style.Style({
-          image: new ol.style.Circle({
-            fill: new ol.style.Fill({
-              color: 'rgba(255,255,0,0.4)',
-            }),
-            radius: 5,
-            stroke: new ol.style.Stroke({
-              color: '#ff0',
-              width: 1,
-            }),
-          }),
-        }),
-        'LineString': new ol.style.Style({
-          stroke: new ol.style.Stroke({
-            color: '#f00',
-            width: 3,
-          }),
-        }),
-        'MultiLineString': new ol.style.Style({
-          stroke: new ol.style.Stroke({
-            color: '#0f0',
-            width: 3,
-          }),
-        }),
-      };
-
-      var vector = new ol.layer.Vector({
-        source: new ol.source.Vector({
-          url: './path/to/your/gpx/file.gpx', // Pfad zur GPX-Datei anpassen
-          format: new ol.format.GPX(),
-        }),
-        style: function (feature) {
-          return style[feature.getGeometry().getType()];
-        },
-      });
-
-      var map = new ol.Map({
-        layers: [raster, vector],
-        target: 'map-container',
-        view: new ol.View({
-          center: ol.proj.fromLonLat([0, 0]),
-          zoom: 2
-        }),
-      });
-    });
-  </script>
 </body>
 </html>
