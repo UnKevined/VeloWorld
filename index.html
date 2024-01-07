@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="leaflet/leaflet.css" />
+  <!-- OpenLayers CSS -->
+  <link rel="stylesheet" href="https://openlayers.org/en/latest/css/ol.css" type="text/css">
   <!-- Page title -->
   <title>VeloWorld</title>
 </head>
@@ -55,27 +55,24 @@
   <!-- Interactive Map section -->
   <section id="map">
     <!-- Karte erstellen -->
-    <div id="map-container" style="height: 400px;"></div>
-    <!-- Leaflet JS -->
-    <script src="leaflet/leaflet.js"></script>
-    <!-- Leaflet GPX Plugin -->
-    <script src="leaflet-gpx/leaflet-gpx.js"></script>
+    <div id="map-container" class="map"></div>
+    <!-- OpenLayers JS -->
+    <script src="https://openlayers.org/en/latest/build/ol.js"></script>
     <script>
-      var map = L.map('map-container').setView([51.505, -0.09], 13);
-  
-      // OpenStreetMap als Kartenprovider
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors'
-      }).addTo(map);
-  
-      // GPX-Datei zur Karte hinzufügen
-      var gpx = 'gpx/96h_Stage_1.gpx'; // Pfad zu deiner GPX-Datei
-      new L.GPX(gpx, {async: true}).on('loaded', function(e) {
-        map.fitBounds(e.target.getBounds());
-      }).addTo(map);
+      var map = new ol.Map({
+        target: 'map-container',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([0, 0]),
+          zoom: 2
+        })
+      });
     </script>
   </section>
-
   
   <!-- About Me section -->
   <section id="about">
