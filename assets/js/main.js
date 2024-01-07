@@ -3,12 +3,12 @@
 
 
 import GPX from './node_modules/ol/format/GPX.js';
-import Map from 'node_modules/ol/Map.js';
-import VectorSource from 'node_modules/ol/source/Vector.js';
-import View from 'node_modules/ol/View.js';
-import XYZ from 'node_modules/ol/source/XYZ.js';
-import {Circle as CircleStyle, Fill, Stroke, Style} from 'node_modules/ol/style.js';
-import {Tile as TileLayer, Vector as VectorLayer} from 'node_modules/ol/layer.js';
+import Map from './node_modules/ol/Map.js';
+import VectorSource from './node_modules/ol/source/Vector.js';
+import View from ':/node_modules/ol/View.js';
+import XYZ from './node_modules/ol/source/XYZ.js';
+import {Circle as CircleStyle, Fill, Stroke, Style} from ':/node_modules/ol/style.js';
+import {Tile as TileLayer, Vector as VectorLayer} from ':/node_modules/ol/layer.js';
 
 document.addEventListener('DOMContentLoaded', function () {
   console.log('DOM content loaded');
