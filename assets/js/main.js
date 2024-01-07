@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
   const vector = new VectorLayer({
     source: new VectorSource({
-      url: 'data/gpx/fells_loop.gpx',
+      url: 'gpx/96h_Stage_1.gpx',
       format: new GPX(),
     }),
     style: function (feature) {
