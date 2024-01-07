@@ -3,7 +3,7 @@ import 'node_modules/ol/ol.css';
 import GPX from 'node_modules/ol/format/GPX.js';
 import Map from 'node_modules/ol/Map.js';
 import View from 'node_modules/ol/View.js';
-import TileLayer from 'node_modules/ol/layer/Tile.js';
+import TileLayer from 'node_modules/ol/Tile.js';
 import { Circle as CircleStyle, Fill, Stroke, Style } from 'node_modules/ol/style.js';
 import { OSM, TileWMS, Vector as VectorSource } from 'node_modules/ol/source.js';
 import { Tile as TileLayer, Vector as VectorLayer } from 'node_modules/ol/layer.js';
