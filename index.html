@@ -59,17 +59,56 @@
     <!-- OpenLayers JS -->
     <script src="https://openlayers.org/en/v8.2.0/build/ol.js"></script>
     <script>
-      var map = new ol.Map({
-        target: 'map-container',
-        layers: [
-          new ol.layer.Tile({
-            source: new ol.source.OSM()
-          })
-        ],
-        view: new ol.View({
-          center: ol.proj.fromLonLat([0, 0]),
-          zoom: 2
-        })
+      document.addEventListener('DOMContentLoaded', function() {
+        var raster = new ol.layer.Tile({
+          source: new ol.source.OSM()
+        });
+
+        var style = {
+          'Point': new ol.style.Style({
+            image: new ol.style.Circle({
+              fill: new ol.style.Fill({
+                color: 'rgba(255,255,0,0.4)',
+              }),
+              radius: 5,
+              stroke: new ol.style.Stroke({
+                color: '#ff0',
+                width: 1,
+              }),
+            }),
+          }),
+          'LineString': new ol.style.Style({
+            stroke: new ol.style.Stroke({
+              color: '#f00',
+              width: 3,
+            }),
+          }),
+          'MultiLineString': new ol.style.Style({
+            stroke: new ol.style.Stroke({
+              color: '#0f0',
+              width: 3,
+            }),
+          }),
+        };
+
+        var vector = new ol.layer.Vector({
+          source: new ol.source.Vector({
+            url: './path/to/your/gpx/file.gpx', // Pfad zur GPX-Datei anpassen
+            format: new ol.format.GPX(),
+          }),
+          style: function (feature) {
+            return style[feature.getGeometry().getType()];
+          },
+        });
+
+        var map = new ol.Map({
+          layers: [raster, vector],
+          target: 'map-container',
+          view: new ol.View({
+            center: ol.proj.fromLonLat([0, 0]),
+            zoom: 2
+          }),
+        });
       });
     </script>
   </section>
