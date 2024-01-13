@@ -227,16 +227,19 @@ footer {
   margin: 0 auto;
 }
 
-.cookie-buttons button {
-  margin: 5px;
-  padding: 5px 10px;
-  cursor: pointer;
-  background-color: #fff;
-  color: #333;
-  border: none;
-  border-radius: 5px;
+.cookie-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
 }
 
-.cookie-buttons button:hover {
-  background-color: #ccc;
+.cookie-toggle label {
+  flex-grow: 1;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.cookie-toggle input {
+  cursor: pointer;
 }

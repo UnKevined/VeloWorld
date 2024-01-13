@@ -48,10 +48,13 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Funktion zum Setzen von Cookies
-  function setCookie(cookieName, value) {
-    document.cookie = `${cookieName}=${value}; expires=${new Date(2022, 0, 1).toUTCString()}; path=/`;
+  function toggleCookie(cookieName) {
+    var checkbox = document.getElementById('btn-' + cookieName);
+    var isChecked = checkbox.checked;
+    document.cookie = `${cookieName}=${isChecked}; expires=${new Date(2022, 0, 1).toUTCString()}; path=/`;
     checkAndShowCookieBanner(); // Hier wird die Funktion aufgerufen
   }
+
 
   // Funktion zum Überprüfen, ob ein Cookie gesetzt ist
   function isCookieSet(cookieName) {

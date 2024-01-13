@@ -86,11 +86,16 @@
         Die Datenverarbeitung kann dann auch in einem Drittland erfolgen.
         Weitere Informationen hierzu in der Datenschutzerklärung.
       </p>
-      <div class="cookie-buttons">
-        <button id="btn-technically-necessary" onclick="setCookie('technicallyNecessary', true)">Technisch notwendig</button>
-        <button id="btn-analytical" onclick="setCookie('analytical', true)">Analytische</button>
+      <div class="cookie-toggle">
+        <label for="btn-technically-necessary">Technisch notwendig</label>
+        <input type="checkbox" id="btn-technically-necessary" onchange="toggleCookie('technicallyNecessary')">
+      </div>
+      <div class="cookie-toggle">
+        <label for="btn-analytical">Analytische</label>
+        <input type="checkbox" id="btn-analytical" onchange="toggleCookie('analytical')">
       </div>
     </div>
   </div>
+
 </body>
 </html>
