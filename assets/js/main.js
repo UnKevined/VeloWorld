@@ -46,4 +46,43 @@ document.addEventListener('DOMContentLoaded', function() {
       navDropdown.classList.remove('show');
     }
   });
+
+  // Funktion zum Setzen von Cookies
+  function setCookie(cookieName, value) {
+    document.cookie = `${cookieName}=${value}; expires=${new Date(2022, 0, 1).toUTCString()}; path=/`;
+    hideCookieBanner();
+  }
+
+  // Funktion zum Überprüfen, ob ein Cookie gesetzt ist
+  function isCookieSet(cookieName) {
+    return document.cookie.includes(`${cookieName}=true`);
+  }
+
+  // Funktion zum Ausblenden des Cookie-Banners
+  function hideCookieBanner() {
+    var cookieBanner = document.getElementById('cookie-banner');
+    if (cookieBanner) {
+      cookieBanner.style.display = 'none';
+    }
+  }
+
+  // Funktion zum Überprüfen und Anzeigen des Cookie-Banners
+  function checkAndShowCookieBanner() {
+    var cookieBanner = document.getElementById('cookie-banner');
+    if (cookieBanner && !isCookieSet('technicallyNecessary') && !isCookieSet('analytical')) {
+      cookieBanner.style.display = 'block';
+    }
+  }
+
+  // Eventlistener für DOMContentLoaded und window.onload
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM content loaded');
+    checkAndShowCookieBanner();
+  });
+
+  window.onload = function() {
+    console.log('Window loaded');
+    checkAndShowCookieBanner();
+  };
+
 });

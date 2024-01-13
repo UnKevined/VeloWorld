@@ -174,8 +174,6 @@ section {
   z-index: 1;
 }
 
-}
-
 /* Abschnitt: About */
 #about {
   background-color: #444;
@@ -210,4 +208,35 @@ footer {
   nav.nav-dropdown.show ul {
     flex-direction: column;
   }
+}
+
+/* Cookie-Banner-Stile */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.cookie-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cookie-buttons button {
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+}
+
+.cookie-buttons button:hover {
+  background-color: #ccc;
 }
