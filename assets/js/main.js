@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Funktion zum Setzen von Cookies
   function setCookie(cookieName, value) {
     document.cookie = `${cookieName}=${value}; expires=${new Date(2022, 0, 1).toUTCString()}; path=/`;
-    hideCookieBanner();
+    checkAndShowCookieBanner(); // Hier wird die Funktion aufgerufen
   }
 
   // Funktion zum Überprüfen, ob ein Cookie gesetzt ist
